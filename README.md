@@ -2,6 +2,8 @@
 
 Project is incomplete.
 
+# Node
+
 Modules used:
 express
 express-handlebars
@@ -13,9 +15,9 @@ path
 cookie-parser
 body-parser
 
-
 All nodejs code is in index.js except for handlebar code.
 
+# SQL
 
 MySql hosted using AmazonRDS
 
@@ -26,8 +28,8 @@ MySql hosted using AmazonRDS
 3. comments
 4. sessions
 
-class Db which is used to connect with the database contains 3 functions:
+class Db which is used to connect with the database contains 3 async functions:
 
-reg() for registration
-qo() for queries with output (e.g. getAds, getComments, login)
-q() for queries without output (e.g. createAd, createComment)
+1. reg() for registration
+2. qo() for queries with output (e.g. getAds, getComments, login)
+3. q() for queries without output (e.g. createAd, createComment)
