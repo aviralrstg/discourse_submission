@@ -1,0 +1,40 @@
+<div class="card">
+      <div class="card-content">
+<form method="post" action="/ad">
+    <input type="text" name="ad_title" placeholder="title">
+    <input type="text" name="ad_data" placeholder="text">
+    <input type="submit" class="btn light-blue" value="Create Ad">
+    <input type="submit" class="btn blue" value="Publish Ad">
+  </form>
+        </div>
+</div>
+
+
+<div class="card">
+      <div class="card-content">
+          <span class="card-title">Card Title</span><span class="card-title2">auther</span>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+</div>
+
+{{#if ads}}
+{{#each ads}}
+<div class="card">
+      <div class="card-content">
+          <span class="card-title">{{title}}</span><span class="card-title">{{user_id}}</span>
+          <p>{{data}}</p>
+        </div>
+        <div class="card-action">
+          <form action="/comment" method="post">
+            <input type="text" name="data">
+            <input value={{id}} hidden="true" name="ad_id">
+            <input type="submit" value="comment">
+          </form>
+        </div>
+</div>
+{{/each}}
+{{/if}}
